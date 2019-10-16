@@ -5,4 +5,7 @@ class StaticPagesController < ApplicationController
   def help
     @randome = '232'
   end
+
+  def about
+  end
 end
