@@ -12,9 +12,17 @@
   <body>
     <%= render 'layouts/header' %>
     <div class="container">
+      <% flash.each do |message_type, message| %>
+        <div class="alert alert-<%= message_type %>"><%= message %></div>
+      <% end %>
       <%= yield %>
       <%= render 'layouts/footer' %>
       <%= debug(params) if Rails.env.development? %>
     </div>
 </body>
 </html>
+
+<!--
+User.create(name: "manikanta k", email: "manikanta2@example.com", password: "1234abcd", password_confirmation: "1234abcd", role: "agent")
+User.create(name: "chitti k", email: "chitti2@example.com", password: "1234abcdef", password_confirmation: "1234abcdef", role: "user")
+-->
