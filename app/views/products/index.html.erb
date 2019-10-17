@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Recommended</h1>
+<div class="products-container">
+  <div class="totals">
+    <%= @products.length %> ITEMS
+  </div>
+  <div class="items-container">
+    <% @products.each do |product| %>
+      <div class="item">
+        <%= image_tag(product.image_url, width: "244", height: '160') %>
+        <div>
+          <div class="heading"><%= product.name %></div>
+          <div class="description"><%= product.description %></div>
+          <div>Rs. <%= product.price %></div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
