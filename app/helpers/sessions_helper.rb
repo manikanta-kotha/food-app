@@ -14,6 +14,11 @@ module SessionsHelper
     !current_user.nil?
   end
 
+  # Returns true if the user is an agent to add products
+  def is_agent?
+    !current_user.nil? && current_user.role === "agent"
+  end
+
   # Logs out the current user.
    def log_out
      session.delete(:user_id)
