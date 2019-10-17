@@ -3,14 +3,14 @@
     <%= link_to "food app", root_path, id: "logo" %>
     <nav>
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "Home",   root_path %></li>
-        
         <% if logged_in? %>
 
           <% if is_agent? %>
+            <li><%= link_to "Products",   products_url %></li>
             <li>  <%= link_to "Add Product", add_path %>   </li>
+          <% else %>
+            <li><%= link_to "Home",   root_path %></li>
           <% end %>
-
           <li>
             <%= link_to "Log out", logout_path, method: "delete" %>
           </li>
