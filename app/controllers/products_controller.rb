@@ -14,8 +14,8 @@ class ProductsController < ApplicationController
   def create
     @product = Product.new(product_params)    # Not the final implementation!
     if @product.save
-      @products = Product.all
-      render 'index'
+      redirect_to products_url
+      flash[:success] = "Item Added successfully"
     else
       render 'new'
     end
