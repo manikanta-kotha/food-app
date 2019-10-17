@@ -8,11 +8,4 @@ class StaticPagesController < ApplicationController
       end
     end
   end
-
-  def help
-    @randome = '232'
-  end
-
-  def about
-  end
 end
