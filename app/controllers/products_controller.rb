@@ -2,6 +2,9 @@ class ProductsController < ApplicationController
 
   # GET /products
   def index
+    if !logged_in?
+      redirect_to root_url
+    end
     @products = Product.all
   end
 
