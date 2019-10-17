@@ -1,24 +1,24 @@
 # README
+This is the sample demo app for ruby-on-rails tutorial
+## run the following command to install yarn dependencies
+```
+yarn
+```
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Starting dev server
+```
+rails s
+```
 
-Things you may want to cover:
+### loging details to test
+Agent
+```
+test1@example.com
+test123
+```
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+User
+```
+test2@example.com
+test123
+```
