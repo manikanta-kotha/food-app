@@ -1,8 +1,8 @@
 # README
 This is the sample demo app for ruby-on-rails tutorial
-## run the following command to install yarn dependencies
+## run the following command to install dependencies
 ```
-yarn
+bundle install && yarn
 ```
 
 ## Starting dev server
