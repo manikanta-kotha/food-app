@@ -1,6 +1,11 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Recommended</h1>
+
+<%= link_to cart_path do %>
+  <button class="btn btn-lg btn-warning pull-right">Checkout</button>
+<% end %>
+
 <div class="products-container">
   <div class="totals">
     <%= @products.length %> ITEMS
@@ -23,3 +28,7 @@
     <% end %>
   </div>
 </div>
+
+<%= link_to('cart') do %>
+  <button class="btn btn-lg btn-warning pull-right">Checkout</button>
+<% end %>

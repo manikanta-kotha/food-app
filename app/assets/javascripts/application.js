@@ -5,6 +5,11 @@
 const CHECKOUT_CART_PATH = 'cart'
 
 $(document).ready(function() {
+  $('button').click(function(){
+    console.log('button click');
+  })
+
+
   let cartData = localStorage.setItem(CHECKOUT_CART_PATH, '[]');
   $('.cart-button').click(function(event){
     event.preventDefault();
@@ -22,4 +27,9 @@ $(document).ready(function() {
       console.log('cartDetails', cartDetails);
     }
   });
+
+  $('.buy-now').click(function(event){
+      alert('Your order placed successfully...continue shopping')
+      window.location = "/"
+  })
 })
