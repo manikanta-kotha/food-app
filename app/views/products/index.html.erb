@@ -15,7 +15,9 @@
           <div>Rs. <%= product.price %></div>
         </div>
         <% if !is_agent? %>
-          <button class="btn btn-lg btn-primary">Add to cart</button>
+        <%= content_tag :button, class: "btn btn-lg btn-primary cart-button", data: {product: product} do %>
+        Add to cart
+        <% end %>
         <% end %>
       </div>
     <% end %>
