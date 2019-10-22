@@ -11,6 +11,7 @@ $(document).ready(function() {
 
 
   let cartData = localStorage.setItem(CHECKOUT_CART_PATH, '[]');
+
   $('.cart-button').click(function(event){
     event.preventDefault();
     const element = $(this)
