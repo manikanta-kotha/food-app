@@ -40,5 +40,15 @@
       }
     }
   }
+  .price {
+    color: #B12704;
+    font-size: 17px;
+    line-height: 1.255;
+  }
+}
 
+.flex-end {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }

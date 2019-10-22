@@ -1,0 +1,39 @@
+<h1>Checkout Cart</h1>
+
+<div class="products-container">
+  <div class="items-container">
+  </div>
+</div>
+
+<script type="text/javascript">
+  cartDetails = JSON.parse(localStorage.getItem(CHECKOUT_CART_PATH));
+  let total = 0
+  for (item of cartDetails) {
+    const {name, price, image_url} = item
+    total += Number(price)
+    $('.items-container').append(
+      `
+        <div class="item">
+          <img src="${image_url}" width="244" height='160' />
+          <div class="heading">${name}</div>
+          <span class="price">Rs. ${price}</div>
+        </div>
+      `
+    )
+  }
+  if (total) {
+    $('.products-container').append(
+      `
+      <hr >
+        <div class="flex-end">
+          <div class="price">
+            Total: ${total}
+          </div>
+          <br />
+          <button class="btn btn-lg btn-success buy-now" >Buy Now</button>
+      </div>
+    `
+    )
+  }
+
+</script>
